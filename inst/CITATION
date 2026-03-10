@@ -1,0 +1,46 @@
+citHeader("nTARP")
+citHeader("Package authors")
+
+citEntry(
+  entry = "manual",
+  title = "nTARP: Thresholding After Random Projections",
+  author = "David Reeping and Yunmeng Han",
+  year = "2026",
+  note = "R package version 0.1.0",
+  url = "https://github.com/<your-repo>/nTARP"
+)
+
+citHeader("References for the n-TARP methodology")
+
+citEntry(
+  entry = "article",
+  author = "Tarun, Y. and Boutin, M.",
+  year = "2018",
+  title = "n-TARP Binary Clustering Code",
+  journal = "Purdue University Research Repository",
+  doi = "10.4231/R74B2ZJV"
+)
+
+citEntry(
+  entry = "phdthesis",
+  author = "Tarun, Y.",
+  year = "2019",
+  title = "n-TARP: A Random Projection based Method for Supervised and Unsupervised Machine Learning in High-dimensions with Application to Educational Data Analysis",
+  school = "Purdue University Graduate School"
+)
+
+citEntry(
+  entry = "article",
+  author = "Yellamraju, T. and Boutin, M.",
+  year = "2018",
+  title = "Pattern dependence detection using n-TARP clustering",
+  journal = "arXiv preprint arXiv:1806.05297"
+)
+
+citEntry(
+  entry = "phdthesis",
+  author = "Yellamraju, T.",
+  year = "2019",
+  title = "n-TARP: A random projection based method for supervised and unsupervised machine learning in high-dimensions with application to educational data analysis",
+  school = "Purdue University"
+)
