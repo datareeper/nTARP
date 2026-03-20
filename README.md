@@ -344,7 +344,7 @@ You'll notice that this contextual variable made our clustering even better, wit
 
 By recursively bisecting clusters and assessing cluster “quality” through metrics like normalized within-cluster sum of squares or Gini-based purity gains, `nTARP` can uncover structure in high-dimensional data while controlling for minimum cluster size. The approach is flexible, allowing post-hoc merging of clusters, and is particularly well-suited for applications where standard clustering algorithms struggle with sparse, high-dimensional, or noisy data.
 
-#3. Another high dimensional example
+# 3. Another high dimensional example
 To close out the demonstration, we can try to apply `nTARP` to one more dataset, the wine dataset from the `HDclassif` package. The `wine` dataset from the `HDclassif` package contains 178 observations of wines derived from three different cultivars grown in the same region of Italy. Each wine is described by 13 continuous chemical measurements, such as alcohol content, flavanoids, magnesium, color intensity, and proline, along with a class label indicating cultivar membership.
 
 ```{r}
