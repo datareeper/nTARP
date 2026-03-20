@@ -31,3 +31,19 @@ cluster labels the user would like to merge. The output is returned
 in the same format as `build_solution_from_labeled_clusters`, with
 the final solution labels renamed to reflect the merging.
 }
+\examples{
+data <- data.frame(X1 = c(0.5, -0.2, 0.1, 0.3, -0.1, 0.2, 5.2, 4.8, 5.1, 5.0,
+                         -4.5, -5.2, -4.8, -5.1, -4.9, -5.3, 0.0, 0.2, 5.3, -5.0),
+  X2 = c(0.3, -0.1, 0.2, 0.1, 0.0, 0.2, 5.0, 4.9, 5.3, 5.1,
+         5.0, 5.2, 4.7, 4.9, 5.1, 4.8, -0.2, 0.0, 5.2, -4.9),
+  X3 = c(0.4, 0.0, 0.1, -0.1, 0.2, 0.0, 5.1, 4.7, 5.2, 5.0,
+         -5.0, -4.8, -5.3, -5.1, -4.9, -5.2, 0.1, 0.3, 5.0, -5.1)
+)
+nTARP_result <- nTARP_bisecting(data = data,number_of_projections = 100,
+withinss_threshold = 0.36, minimum_cluster_size_percent = 30)
+result <- build_solution_from_labeled_clusters(nTARP_best_clusters = nTARP_result$BestClusters,
+ids = 1:20, contextual_variables_df = data)
+str(result)
+result <- consolidate_clusters(result,first_cluster_to_combine = 1,second_cluster_to_combine = 2)
+str(result)
+}

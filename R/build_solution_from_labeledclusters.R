@@ -5,9 +5,6 @@
 #' per-run cluster assignment column, constructs a concatenated `ClusterPath`, and assigns
 #' a stable numeric `FinalClusterID` based on unique `ClusterPath` values.
 #'
-#' This function assumes the necessary objects are already in memory (e.g., in the global
-#' environment or passed directly). It performs no file reading/writing.
-#'
 #' @param contextual_variables_df Optional `data.frame` of contextual variables to merge in.
 #' If supplied, it must contain a column named `id_name` (default `"mcid"`). The merge is a
 #' left join on the provided `ids` vector, so every ID in `ids` appears in the output.
@@ -23,6 +20,18 @@
 #'
 #' @return A `data.frame` with one row per ID in `ids`, optionally merged with contextual variables,
 #' plus per-run cluster columns, `ClusterPath`, and `FinalClusterID`.
+#' @examples
+#' data <- data.frame(X1 = c(0.5, -0.2, 0.1, 0.3, -0.1, 0.2, 5.2, 4.8, 5.1, 5.0,
+#'                          -4.5, -5.2, -4.8, -5.1, -4.9, -5.3, 0.0, 0.2, 5.3, -5.0),
+#'   X2 = c(0.3, -0.1, 0.2, 0.1, 0.0, 0.2, 5.0, 4.9, 5.3, 5.1,
+#'          5.0, 5.2, 4.7, 4.9, 5.1, 4.8, -0.2, 0.0, 5.2, -4.9),
+#'   X3 = c(0.4, 0.0, 0.1, -0.1, 0.2, 0.0, 5.1, 4.7, 5.2, 5.0,
+#'          -5.0, -4.8, -5.3, -5.1, -4.9, -5.2, 0.1, 0.3, 5.0, -5.1)
+#' )
+#' nTARP_result <- nTARP_bisecting(data = data,number_of_projections = 100,withinss_threshold = 0.36)
+#' result <- build_solution_from_labeled_clusters(nTARP_best_clusters = nTARP_result$BestClusters,
+#' ids = 1:10, contextual_variables_df = data)
+#' str(result)
 #' @export
 
 build_solution_from_labeled_clusters <- function(nTARP_best_clusters,

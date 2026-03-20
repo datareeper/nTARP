@@ -26,6 +26,12 @@
 #'
 #' @references Tarun, Y.; Boutin, M. (2018). n-TARP Binary Clustering Code. Purdue University Research Repository. doi:10.4231/R74B2ZJV
 #' @importFrom stats runif kmeans var setNames
+#' @examples
+#' data <- data.frame(X1 = c(0.5, -0.2, 0.1, 5.2, 4.8, 5.1, -4.5, -5.2, -4.8, -5.1),
+#' X2 = c(0.3, -0.1, 0.2, 5.0, 4.9, 5.3, 5.0, 5.2, 4.7, 4.9),
+#' X3 = c(0.4, 0.0, 0.1, 5.1, 4.7, 5.2, -5.0, -4.8, -5.3, -5.1))
+#' result <- nTARP(data = data,number_of_projections = 100,withinss_threshold = 0.36)
+#' str(result)
 #' @export
 
 nTARP <- function(data,number_of_projections,withinss_threshold,ids=NULL)

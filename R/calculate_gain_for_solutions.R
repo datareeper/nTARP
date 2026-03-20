@@ -1,7 +1,5 @@
 #' Calculate gain for solutions
 #'
-#' @keywords  internal
-#'
 #' Calculates the gain for each cluster solution from the `nTARP`
 #' output based on a user-specified contextual variable, in order to determine
 #' which clusters are most helpful for explaining the clustering structure.
@@ -17,15 +15,18 @@
 #' where n is the size of the original (parent) cluster, and n_1 and n_2
 #' are the sizes of the two resulting clusters.
 #'
-#' @param clusterings List — a list of cluster solutions from the `nTARP`
-#'   function output (`"Clusterings"`)
-#' @param contextual_variable Vector of integers or characters — variable to use as the basis
+#' @param clusterings List - a list of cluster solutions from the `nTARP`
+#'   function output (`Clusterings`)
+#' @param contextual_variable Vector of integers or characters - variable to use as the basis
 #'   for comparing clusters
 #'
 #' @return A list containing:
 #'   (1) Gains for each pair of clusters, and
 #'   (2) Output from the `evaluate_cluster_solution` function containing full
-#'       information on each solution's Gini indices and distribution of groups.
+#'       information on each solution's Gini indices and distribution of groups
+#'
+#' @keywords internal
+#' @noRd
 
 calculate_gain_for_solutions <- function(clusterings,contextual_variable)
 {

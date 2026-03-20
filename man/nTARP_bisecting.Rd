@@ -59,3 +59,37 @@ at each step:
 The process continues recursively (bisecting the largest eligible cluster)
 until no resulting cluster meets the user-defined minimum size threshold.
 }
+\examples{
+# 20-point example dataset
+data <- data.frame(
+  X1 = c(0.5, -0.2, 0.1, 0.3, -0.1, 0.2, 5.2, 4.8, 5.1, 5.0,
+         -4.5, -5.2, -4.8, -5.1, -4.9, -5.3, 0.0, 0.2, 5.3, -5.0),
+  X2 = c(0.3, -0.1, 0.2, 0.1, 0.0, 0.2, 5.0, 4.9, 5.3, 5.1,
+         5.0, 5.2, 4.7, 4.9, 5.1, 4.8, -0.2, 0.0, 5.2, -4.9),
+  X3 = c(0.4, 0.0, 0.1, -0.1, 0.2, 0.0, 5.1, 4.7, 5.2, 5.0,
+         -5.0, -4.8, -5.3, -5.1, -4.9, -5.2, 0.1, 0.3, 5.0, -5.1)
+)
+
+# Run nTARP without contextual variable
+result1 <- nTARP_bisecting(
+  data = data,
+  number_of_projections = 10,
+  withinss_threshold = 0.36
+)
+str(result1)
+
+# Add a latent group as contextual variable
+latent_group <- c(1, 1, 1, 1, 1, 1, 2, 2, 2, 2,
+                  3, 3, 3, 3, 3, 3, 1, 1, 2, 3)
+
+# Run nTARP with contextual variable
+result2 <- nTARP_bisecting(
+  data = data,
+  number_of_projections = 10,
+  withinss_threshold = 0.36,
+  contextual_variable = latent_group
+)
+str(result2)
+
+
+}

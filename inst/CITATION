@@ -1,46 +1,48 @@
-citHeader("nTARP")
-citHeader("Package authors")
+# To cite package nTARP in publications use:
 
-citEntry(
-  entry = "manual",
-  title = "nTARP: Thresholding After Random Projections",
-  author = "David Reeping and Yunmeng Han",
+bibentry(
+  bibtype = "Manual",
+  title = "nTARP: Cluster Analysis Using Thresholding After Random Projections (n-TARP)",
+  author = c(
+    person("David", "Reeping", email = "reepindp@ucmail.uc.edu", role = c("aut", "cre")),
+    person("Yunmeng", "Han", email = "hany@ucmail.uc.edu", role = "aut"),
+    person("Nahal", "Rashedi", email = "rashednl@mail.uc.edu", role = "rev")
+  ),
   year = "2026",
   note = "R package version 0.1.0",
-  url = "https://github.com/<your-repo>/nTARP"
+  url = "https://github.com/datareeper/nTARP"
 )
 
-citHeader("References for the n-TARP methodology")
+# The n-TARP method implemented in this package is based on:
 
-citEntry(
-  entry = "article",
-  author = "Tarun, Y. and Boutin, M.",
-  year = "2018",
+bibentry(
+  bibtype = "Article",
   title = "n-TARP Binary Clustering Code",
+  author = c(
+    person("Tarun", "Yellamraju", role = "aut"),
+    person("Mireille", "Boutin", role = "aut")
+  ),
+  year = "2018",
   journal = "Purdue University Research Repository",
   doi = "10.4231/R74B2ZJV"
 )
 
-citEntry(
-  entry = "phdthesis",
-  author = "Tarun, Y.",
+bibentry(
+  bibtype = "PhDThesis",
+  title = "n-TARP: A Random Projection Based Method for Supervised and Unsupervised Machine Learning in High Dimensions with Application to Educational Data Analysis",
+  author = person("Tarun", "Yellamraju", role = "aut"),
   year = "2019",
-  title = "n-TARP: A Random Projection based Method for Supervised and Unsupervised Machine Learning in High-dimensions with Application to Educational Data Analysis",
   school = "Purdue University Graduate School"
 )
 
-citEntry(
-  entry = "article",
-  author = "Yellamraju, T. and Boutin, M.",
+bibentry(
+  bibtype = "Article",
+  title = "Pattern Dependence Detection Using n-TARP Clustering",
+  author = c(
+    person("Tarun", "Yellamraju", role = "aut"),
+    person("Mireille", "Boutin", role = "aut")
+  ),
   year = "2018",
-  title = "Pattern dependence detection using n-TARP clustering",
-  journal = "arXiv preprint arXiv:1806.05297"
-)
-
-citEntry(
-  entry = "phdthesis",
-  author = "Yellamraju, T.",
-  year = "2019",
-  title = "n-TARP: A random projection based method for supervised and unsupervised machine learning in high-dimensions with application to educational data analysis",
-  school = "Purdue University"
+  journal = "arXiv preprint",
+  note = "arXiv:1806.05297"
 )

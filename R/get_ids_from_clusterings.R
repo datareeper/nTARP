@@ -1,16 +1,17 @@
 #' Get IDs from clusterings
 #'
-#'#' @keywords  internal
-#'
 #' Pulls the IDs used to identify observations in cluster solutions so they
 #' can be used for other purposes, including tracking observations between solutions.
 #'
-#' @param ids Numeric or character vector — identifying labels for individuals in the clusters
-#' @param cluster_member_vector Numeric vector — cluster assignments from `nTARP`
+#' @param ids Numeric or character vector - identifying labels for individuals in the clusters
+#' @param cluster_member_vector Numeric vector - cluster assignments from `nTARP`
 #'
 #' @return A list with two entries:
 #'   - One containing the IDs in cluster 1
 #'   - One containing the IDs in cluster 2
+#'
+#' @keywords internal
+#' @noRd
 
 get_ids_from_clusterings <- function(ids, cluster_member_vector)
 {

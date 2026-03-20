@@ -1,25 +1,25 @@
 #' Get IDs from clusterings
 #'
-#' #' @keywords  internal
-#'
 #' Pulls the IDs used to identify observations in cluster solutions so that
 #' they can be used for other purposes, including tracking observations
 #' between solutions.
 #'
-#' @param gains_list Numeric vector — gain values from the
+#' @param gains_list Numeric vector - gain values from the
 #'   `calculate_gains_for_solution` output (`Gains`)
-#' @param full_gains_list List — gain values from the
+#' @param full_gains_list List - gain values from the
 #'   `calculate_gains_for_solution` output (`FullGainInformation`)
-#' @param clusterings List — a list of cluster solutions from the `nTARP`
+#' @param clusterings List - a list of cluster solutions from the `nTARP`
 #'   function output (`Clusterings`)
-#' @param ids Numeric or character vector — identifying labels for individuals in the clusters
-#' @param contextual_variable Vector of integers or characters — variable used as the basis
+#' @param ids Numeric or character vector - identifying labels for individuals in the clusters
+#' @param contextual_variable Vector of integers or characters - variable used as the basis
 #'   for comparing clusters
 #'
 #' @return A list with two entries:
 #'   - One containing the IDs in cluster 1
 #'   - One containing the IDs in cluster 2
-
+#'
+#' @keywords internal
+#' @noRd
 
 pull_best_solution_and_gain <- function(gains_list,full_gains_list,clusterings,ids,contextual_variable)
 {

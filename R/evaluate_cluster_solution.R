@@ -1,7 +1,5 @@
 #' Evaluate cluster solution
 #'
-#'#' @keywords  internal
-#'
 #' Calculates the gain for a cluster solution from `nTARP` based on a user-specified
 #' contextual variable to determine which clusters are most informative in explaining
 #' the data structure. The gain is calculated using the Gini index. A Gini index of 0
@@ -24,8 +22,8 @@
 #' where n is the size of the parent cluster, and n_1 and n_2 are the sizes of the
 #' resulting clusters.
 #'
-#' @param cluster_member_vector Numeric vector — cluster assignments from `nTARP`
-#' @param contextual_variable Vector of integers or characters — variable used as the basis
+#' @param cluster_member_vector Numeric vector - cluster assignments from `nTARP`
+#' @param contextual_variable Vector of integers or characters - variable used as the basis
 #'   for comparing clusters
 #'
 #' @return A list containing:
@@ -36,7 +34,10 @@
 #'   (5) Distribution of the contextual variable in cluster 2 (percentage),
 #'   (6) Gini index for the parent cluster,
 #'   (7) Gini index for cluster 1,
-#'   (8) Gini index for cluster 2.
+#'   (8) Gini index for cluster 2
+#'
+#' @keywords internal
+#' @noRd
 
 evaluate_cluster_solution <- function(cluster_member_vector,contextual_variable)
 {
