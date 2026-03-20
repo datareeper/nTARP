@@ -5,7 +5,7 @@ This R Notebook demonstrates the functionality of the nTARP package, which imple
 
 **Figure 1:** The premise of n-TARP, projecting data from higher dimensions into 1-D using random projections to find the best clustering 
 
-![](../inst/figures/nTARP_illustration.png){width=80%}
+![Figure 1: The premise of n-TARP](https://raw.githubusercontent.com/datareeper/nTARP/main/inst/figures/nTARP_illustration.png)
 
 The algorithm flows like so:
 
@@ -46,7 +46,7 @@ A flowchart can summarizing the process can be seen below in Figure 2.
 
 **Figure 2:** How the nTARP process works
 
-![](../inst/figures/nTARP_generic.png)
+![Figure 2: How the nTARP process works](inst/figures/nTARP_generic.png)
 
 As you might gather from the loop at the core of the algorithm, several candidate solutions are generated and one is chosen based on the within sum of squares. Although n-TARP has been used sparingly, its applications have been notably diverse. In some cases, researchers have addressed the randomness of the algorithm by tracking cluster membership across iterations and aggregating results into composite profiles. In others, n-TARP has been applied as a conventional clustering tool to identify meaningful splits between participant groups.
 
@@ -299,7 +299,7 @@ To illustrate the process, Figure 3 presents a simplified flowchart of the bisec
 
 **Figure 3:** How the nTARP process works when iteratively breaking down clusters with and without a contextual variable
 
-![](../inst/figures/nTARP_bisecting.png)
+![Figure 3: How the nTARP process works when iteratively breaking down clusters with and without a contextual variable](inst/figures/nTARP_bisecting.png)
 
 Let’s see how this works for the `iris` dataset, where the goal is to cluster observations with respect to the `Species` variable. We use the exact same function as before, but now we add the contextual variable:
 
